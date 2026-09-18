@@ -1,0 +1,45 @@
+{
+  // Configuración global del compilador de TypeScript
+  "compilerOptions": {
+    // Versión de JavaScript a la que se transpila el código. ES2022 porque Node 24 ya la soporta por completo.
+    "target": "ES2022",
+
+    // Librerías de tipos disponibles. ES2022 es el runtime de Node; DOM y DOM.Iterable los necesita src/app.ts, que viene del módulo 3 (navegador) y usa document, HTMLElement, localStorage, etc. Sin "DOM" aquí el compilador no conocería document ni el resto de la API del navegador. TypeScript ya trae DOM por defecto, pero lo dejamos explícito para que quede claro que este proyecto mezcla Node y navegador.
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    // Sistema de módulos: NodeNext respeta el "type": "module" del package.json y genera ESM real (import/export).
+    "module": "NodeNext",
+
+    // Cómo resuelve las rutas de los imports: igual que Node en tiempo de ejecución, por eso los imports llevan .js.
+    "moduleResolution": "NodeNext",
+
+    // La raíz del código fuente: solo se compila lo que está dentro de src.
+    "rootDir": "./src",
+
+    // Carpeta donde se escribe el JavaScript compilado tras el build.
+    "outDir": "./dist",
+
+    // Carga los tipos de Node (@types/node) para poder usar console, process, etc.
+    "types": ["node"],
+
+    // Activa todas las reglas estrictas: null checks, inferencia estricta, tipos implícitos prohibidos, etc.
+    "strict": true,
+
+    // Exige separar los imports de tipos (import type) de los de valores, hace el código más claro.
+    "verbatimModuleSyntax": true,
+
+    // Trata cada archivo como un módulo aunque no tenga import/export, evita ambigüedades.
+    "moduleDetection": "force",
+
+    // Permite importar librerías CommonJS (de fábrica) sin errores de interop.
+    "esModuleInterop": true,
+
+    // No vuelve a revisar los .d.ts de node_modules (paquetes ajenos): compila más rápido y evita fallos que no nos tocan.
+    "skipLibCheck": true,
+
+    // Fuerza coherencia entre mayúsculas y minúsculas en las rutas, evita bugs en Windows.
+    "forceConsistentCasingInFileNames": true
+  },
+  // Qué archivos participan en la compilación: todo el contenido de src.
+  "include": ["src"]
+}

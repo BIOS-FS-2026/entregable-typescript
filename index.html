@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Marcelo Colamonici</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="Portfolio.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <div id="logo" class="logo"></div>
+            
+            <div class="header-controls">
+                <button id="btn-tema" aria-label="Cambiar tema">🌙</button>
+                <button id="menu-btn" aria-label="Abrir menu">☰</button>
+            </div>
+            
+            <h1>MARCELO COLAMONICI</h1>          
+            <h2>Portfolio</h2>
+            
+            <ul class="nav-links-menu">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Sobre mí</h2>
+            <p>Hola, soy Marcelo, me dedico a la informática hace 30 años. Soy desarrollador web y diseñador gráfico, además tengo conocimientos en programación (dbase, clipper5, foxpro).
+                He realizado varios sistemas en estos lenguajes, y también he desarrollado sitios web utilizando HTML, CSS, algo de JavaScript, PHP y MySQL. 
+                Me apasiona la tecnología y siempre estoy buscando aprender nuevas habilidades para mejorar mis proyectos. 
+                En este portafolio encontrarás algunos de mis trabajos más destacados. ¡Gracias por visitar mi sitio!
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Proyectos</h2>
+            <div class="imagenes-container">    
+                <article class="tarjeta-archivo">
+                    <div class="icono-archivo">
+                        <i class="fas fa-globe"></i> 
+                    </div>
+                    <h3>Diseño de almanaques</h3>
+                    <p>Diseño en Illustrator de almanaques.</p>
+                    <img src="/Trabajos/Desarrollo-Full-Stack/dev/bios/mi-primer-proyecto/primeros-pasos-js/Almanaque.jpg" alt="Almanaque 2025" loading="lazy">
+                </article>
+
+                <article class="tarjeta-archivo">
+                    <div class="icono-archivo">
+                        <i class="fas fa-palette"></i> 
+                    </div>
+                    <h3>Diseño gráfico</h3>
+                    <p>Creación de identidad visual y desarrollo de banner, flyer y otros elementos gráficos.</p>
+                    <img src="/Trabajos/Desarrollo-Full-Stack/dev/bios/mi-primer-proyecto/primeros-pasos-js/Diadelamujer2024.jpg" alt="Día de la Mujer 2024" loading="lazy">
+                </article>
+
+                <article class="tarjeta-archivo">
+                    <div class="icono-archivo">
+                        <i class="fas fa-book-open"></i> 
+                    </div>
+                    <h3>Tapa de Revista Institucional</h3>
+                    <p>Diseño editorial y maquetación de portada de revista.</p>
+                    <img src="/Trabajos/Desarrollo-Full-Stack/dev/bios/mi-primer-proyecto/primeros-pasos-js/tapa24.jpg" alt="Tapa Revista 2024" loading="lazy">
+                </article>
+
+                <article class="tarjeta-archivo">
+                    <div class="icono-archivo">
+                        <i class="fa-brands fa-leanpub"></i>
+                    </div>
+                    <h3>Diseño web</h3>
+                    <p>Diseño para tu sitio web, con Canva.</p>
+                    <img src="/Trabajos/Desarrollo-Full-Stack/dev/bios/mi-primer-proyecto/primeros-pasos-js/aparatos.jpg" alt="Aparatos" loading="lazy">
+                </article>
+
+                <article class="tarjeta-archivo">
+                    <div class="icono-archivo">
+                        <i class="fa-solid fa-layer-group"></i> 
+                    </div>
+                    <h3>Folletería | Tarjetas</h3>
+                    <p>Creación de folletos.</p>
+                    <img src="/Trabajos/Desarrollo-Full-Stack/dev/bios/mi-primer-proyecto/primeros-pasos-js/Afiche.jpg" alt="Afiche" loading="lazy">
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <h2 class="form-h2">Formulario de Contacto</h2>
+    <form id="contact">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre aquí" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu email aquí" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"></textarea> 
+        
+        <button class="boton" type="submit">Enviar</button>
+        
+        <p id="statusMessage"></p>
+    </form>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <a href="#header" style="color: inherit; text-decoration: none; cursor: pointer;">
+                <div class="footer-text">
+                    Copyright © 2026 <strong>Marcelo Colamonici Chorbadjian - Desarrollo Full Stack <i class="fa-solid fa-arrow-up"></i></strong>
+                </div>
+            </a>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" class="icon twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
